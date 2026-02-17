@@ -13,8 +13,6 @@ const HomePages = () => {
         <Offers />
         <TrendingDestinations />
       </Box>
-
-
     </>
   )
 }

@@ -221,6 +221,7 @@ const SearchWidget = () => {
                           </Text>
                           <Flex gap={2} align="center">
                             <IconButton
+                              bg={'primary.500'}
                               size="sm"
                               aria-label="decrease"
                               onClick={() =>
@@ -239,6 +240,7 @@ const SearchWidget = () => {
                             <Text>{guests[key]}</Text>
 
                             <IconButton
+                              bg={'primary.500'}
                               size="sm"
                               aria-label="increase"
                               onClick={() =>

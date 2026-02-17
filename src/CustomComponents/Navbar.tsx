@@ -1,5 +1,5 @@
-import { Box, Flex, Button, Text, Image } from "@chakra-ui/react";
-import { useNavigate, useRoutes } from "react-router-dom";
+import { Box, Flex, Button, Text, Image, Avatar, AvatarGroup, AvatarFallback } from "@chakra-ui/react";
+import { Link, useNavigate, useRoutes } from "react-router-dom";
 
 export const Navbar = () => {
     const navigate = useNavigate();
@@ -30,27 +30,29 @@ export const Navbar = () => {
                     wrap="wrap"
                     justify={{ base: "flex-start", md: "flex-end" }}
                 >
-                    <Button size="sm" variant="ghost" color="white">
+                    <Button size="sm" bg={'primary.400'} color="white" >
                         INR
                     </Button>
-                    <Box
-                        w="32px"
-                        h="32px"
-                        borderRadius="full"
-                        overflow="hidden"
-                    >
-                        <Image
-                            src="https://i.pravatar.cc/100"
-                            alt="User"
-                            objectFit="cover"
-                        />
-                    </Box>
+                    <Button bg={'primary.400'}>
 
-                    <Button size="sm" variant="ghost" color="white">
+                        <AvatarGroup size={'xs'}>
+                            <Avatar.Root colorPalette={'Primary'}>
+                                <Avatar.Fallback name="Mukesh rai" >
+                                    {/* <Avatar.Image /> */}
+                                </Avatar.Fallback>
+                            </Avatar.Root>
+
+                        </AvatarGroup>
+                    </Button>
+
+                    <Button as={Link} size="sm" bg={'primary.400'} color="white" >
                         List your property
                     </Button>
-                    <Button size="sm" bg="white" color="#0664b1" onClick={() => navigate('/signup')}>
-                        Sign in / Register
+                    <Button size="sm" bg={'white'} color={'primary.500'} onClick={() => navigate('/login')}>
+                        Sign in
+                    </Button>
+                    <Button size="sm" bg={'white'} color={'primary.500'} onClick={() => navigate('/signup')}>
+                        Sign up
                     </Button>
                 </Flex>
             </Flex>

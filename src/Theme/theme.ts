@@ -5,7 +5,9 @@ export const system = createSystem(defaultConfig, {
         tokens: {
             colors: {
                 primary: {
+                    400: { value: "#1a7fc8" },
                     500: { value: "#0071c2" },
+                    
                 },
                 secondary: {
                     500: { value: "#e9f5ff" },

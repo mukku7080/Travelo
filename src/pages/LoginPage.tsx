@@ -11,11 +11,14 @@ import {
     Center,
     Link,
 } from "@chakra-ui/react";
+import { FaChrome } from "react-icons/fa";
 import { FiUserPlus } from "react-icons/fi";
-import { LuBadgePercent } from "react-icons/lu";
+import { IoDiamondOutline } from "react-icons/io5";
+import { LuBadgePercent,LuBaggageClaim, LuHeart } from "react-icons/lu";
 import { MdSecurity } from "react-icons/md";
 
-const CreateAccount = () => {
+
+const LoginPage = () => {
     return (
         <Box bg="background.500" minH="100vh">
 
@@ -25,24 +28,24 @@ const CreateAccount = () => {
                     {/* LEFT INFO */}
                     <Box flex="1">
                         <Heading size="xl" mb={6}>
-                            Create your Travelo.com account
+                            Log in to manage your trips
                         </Heading>
 
                         <Flex direction="column" gap={6}>
                             <InfoItem
-                                title="Manage all your bookings"
-                                desc="View, change, or cancel your stays and trips in one place, anytime."
-                                icon={<FiUserPlus color="#0071c2" />}
+                                title="Easily manage your bookings"
+                                desc="View confirmation details, make changes, or cancel if needed."
+                                icon={<LuBaggageClaim color='#0071c2' />}
                             />
                             <InfoItem
-                                title="Unlock Genius rewards"
-                                desc="Get instant discounts, free perks, and special member-only deals."
-                                icon={<LuBadgePercent color="#0071c2" />}
+                                title="Save more with Genius"
+                                desc="Get up to 20% off with our loyalty program just by signing in."
+                                icon={<IoDiamondOutline color="#0071c2" />}
                             />
                             <InfoItem
-                                title="Secure and fast checkout"
-                                desc="Save your details safely and check out faster on every future booking."
-                                icon={<MdSecurity color="#0071c2" />}
+                                title="Your favorite, saved"
+                                desc="Keep track of the properties you love and want to book again."
+                                icon={<LuHeart color="#0071c2" />}
                             />
                         </Flex>
                     </Box>
@@ -52,57 +55,48 @@ const CreateAccount = () => {
                         w="420px"
                         bg="white"
                         p={8}
-                        borderRadius="xl"
+                        borderRadius="lg"
                         border="1px solid"
                         borderColor="gray.200"
                     >
                         <Heading size="xl" mb={2}>
-                            Create account
+                            Sign in to your account
                         </Heading>
 
                         <Text color="muted.500" mb={6} fontSize="sm">
-                            Sign up using your email address or continue with one of the
-                            options below.
+                            Access your account securily using your email and password.
                         </Text>
+                        <Flex flexDirection={'column'}>
+                            <FormField label="Email address" placeholder="name@example.com" />
+                            <FormField label="Password" placeholder="••••••••" type="password" />
 
-                        <FormField label="Full name" placeholder="John Doe" />
-                        <FormField label="Email address" placeholder="name@example.com" />
-                        <FormField label="Password" placeholder="••••••••" type="password" />
-                        <FormField
-                            label="Confirm password"
-                            placeholder="••••••••"
-                            type="password"
-                        />
+                            <Link mt={0} fontSize={12} mb={4} color={'primary.500'} href="/login">Forget your password?</Link>
 
-
-                        <Checkbox.Root mt={4} mb={4}>
-                            <Checkbox.Control />
-                            <Checkbox.Label fontSize={12}>
-                                Send me travel deals, personalized recommendations.
-                            </Checkbox.Label>
-                        </Checkbox.Root>
-
+                        </Flex>
 
                         <Button
                             bg="primary.500"
                             color="white"
                             w="full"
                             mt={2}
+                            size={'lg'}
                         >
-                            Create account
+                            Sign in
                         </Button>
-                        <Separator my={6}>
-                        </Separator>
-                        <Button w="full" variant="outline" mb={3}>
+                        <Separator my={6} />
+
+
+                        <Button  w="full" variant="outline" mb={3} color={"primary.500"} >
+                            <FaChrome color="#0664b1" />
                             Continue with Google
                         </Button>
 
 
 
                         <Text mt={6} fontSize="sm" textAlign="center" color="muted.500">
-                            Already have an account?{" "}
+                            Don't have any account?{" "}
                             <Box as={Link} color="primary.500" fontWeight="600">
-                                Sign in
+                                Create account
                             </Box>
                         </Text>
                     </Box>
@@ -112,7 +106,7 @@ const CreateAccount = () => {
     );
 };
 
-export default CreateAccount;
+export default LoginPage;
 const InfoItem = ({
     title,
     desc,
