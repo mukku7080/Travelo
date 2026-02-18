@@ -6,16 +6,13 @@ import {
     Button,
     Container,
     Input,
-    Checkbox,
     Separator,
     Center,
     Link,
 } from "@chakra-ui/react";
 import { FaChrome } from "react-icons/fa";
-import { FiUserPlus } from "react-icons/fi";
 import { IoDiamondOutline } from "react-icons/io5";
-import { LuBadgePercent,LuBaggageClaim, LuHeart } from "react-icons/lu";
-import { MdSecurity } from "react-icons/md";
+import { LuBaggageClaim, LuHeart } from "react-icons/lu";
 
 
 const LoginPage = () => {

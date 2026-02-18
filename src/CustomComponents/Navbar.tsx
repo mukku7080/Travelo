@@ -1,5 +1,5 @@
-import { Box, Flex, Button, Text, Image, Avatar, AvatarGroup, AvatarFallback } from "@chakra-ui/react";
-import { Link, useNavigate, useRoutes } from "react-router-dom";
+import { Box, Flex, Button,  Avatar, AvatarGroup } from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
     const navigate = useNavigate();
